@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "run": "deno run --allow-env --allow-read --allow-net --watch ./src/server.ts"
+  },
+  "compilerOptions": {
+    "noImplicitAny": false
+  },
+  "importMap": "map.json"
+}

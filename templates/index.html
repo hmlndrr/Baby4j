@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Baby4J</title>
+</head>
+
+<body>
+    <div class="min-h-screen grid place-content-center">
+        <form class="w-96 flex-col space-y-4" method="post">
+            <h1 class="text-center">
+                <span class="text-xl">WHO</span>
+                <span class="text-2xl font-bold"> IS HIDING </span>
+                <span class="text-xl">A SECRET</span>
+            </h1>
+            <img src="https://media.istockphoto.com/id/523738627/vector/secret.jpg?s=612x612&w=0&k=20&c=_JlpP5Oe9HrZXPoKhuAL12100CRt7wAEbsYwBkuvm1U="
+                alt="illustration" />
+            <div>Click on the person to know who he knows</div>
+            <div>
+                <ul class="flex flex-wrap">
+                    <% it.names.forEach(function(name){ %>
+                        <li>
+                            <a class="text-blue-500 pr-4" href="?q=<%= name %>">
+                                <%= name %>
+                            </a>
+                        </li>
+                        <% }) %>
+                </ul>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

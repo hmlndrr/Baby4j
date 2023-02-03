@@ -1,0 +1,10 @@
+{
+    "imports": {
+      "dotenv": "https://deno.land/x/dotenv@v3.2.0/load.ts",
+      "eta": "https://deno.land/x/eta@v2.0.0/mod.ts",
+      "http": "https://deno.land/std@0.173.0/http/server.ts",
+      "neo4j": "https://deno.land/x/neo4j_lite_client@4.4.1-preview2/mod.ts",
+      "utils": "./src/utils.ts"
+    }
+  }
+  
