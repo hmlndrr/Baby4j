@@ -32,7 +32,7 @@ export async function getWhoThatPersonKnows(client, person) {
     const results = await client.run(q)
     return results.records.map(record => record.get('x').properties.name)
   } catch (e) {
-    return 'Error: ' + e.message
+    return ['Error: ' + e.message]
   }
 }
 
