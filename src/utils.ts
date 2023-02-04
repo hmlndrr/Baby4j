@@ -24,8 +24,15 @@ export async function getAllPersons(client) {
   return results.records.map(record => record.get('x').properties.name)
 }
 
-export async function getWhoThatPersonKnows(client, person) {
+export async function getWhoThatPersonKnows(client, person: string) {
   try {
+    if (
+      person.toLocaleLowerCase().includes('set') ||
+      person.toLocaleLowerCase().includes('modify') ||
+      person.toLocaleLowerCase().includes('update')
+    ) {
+      return []
+    }
     const q = `
       match (x:Person)-[:KNOWS]->(y:Person where y.name = '${person}') return x
       `

@@ -17,7 +17,7 @@ async function handler(req: Request) {
   if (query) {
     const params = new URLSearchParams(query)
     const q = params.get('q')
-    result = await getWhoThatPersonKnows(client, q)
+    result = await getWhoThatPersonKnows(client, q || '')
   } else {
     result = await getAllPersons(client)
   }
